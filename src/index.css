@@ -1,0 +1,117 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: lexend;
+  src: url("./assets/fonts/Lexend-VariableFont_wght.ttf")
+    format("truetype-variations");
+  font-weight: 100 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: HeptaSlab;
+  src: url("./assets/fonts/HeptaSlab-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: Seymor;
+  src: url("./assets/fonts/SeymourOne-Regular.ttf");
+}
+
+@theme {
+  --font-lexend: "lexend", sans-serif;
+  --font-HeptaSlab: "HeptaSlab", sans-serif;
+  --font-Seymor: "Seymor", sans-serif;
+}
+
+html,
+body {
+  /* background: #07588a; */
+  color: #111111;
+  background-color: white;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+@utility flex-center {
+  @apply flex justify-center items-center;
+}
+
+@utility col-center {
+  @apply flex flex-col justify-center items-center;
+}
+
+@utility abs-center {
+  @apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2;
+}
+
+@utility text-gradient {
+  background: linear-gradient(to bottom, #ffffff, #898989);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility radial-gradient {
+  background: radial-gradient(
+    circle at center,
+    #434343 0%,
+    #000 50%,
+    transparent 100%
+  );
+}
+
+.boldonse-regular {
+  font-family: "Boldonse", system-ui;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@layer components {
+  main {
+    @apply w-full overflow-x-hidden;
+  }
+
+  nav {
+    @apply fixed z-50 w-full;
+
+    div {
+      @apply flex md:flex-row flex-col md:justify-evenly items-center md:gap-5   py-5 lg:px-2  mx-auto container;
+    }
+
+    ul {
+      @apply flex-center lg:gap-12 gap-7;
+    }
+
+    p {
+      @apply font-HeptaSlab -mb-2 text-sm   md:text-xl;
+    }
+    button{
+      @apply bg-black text-white font-semibold px-4 py-2 rounded-full
+    }
+  }
+
+  #hero {
+    @apply z-10 relative min-h-dvh w-full border border-transparent ;
+
+    h1 {
+      @apply text-8xl font-lexend leading-none;
+    }
+    p {
+      @apply md:mt-32 mt-40;
+    }
+
+    .content {
+      @apply  md:mb-16 md:mt-0 mt-40 gap-10 items-center;
+    }
+  }
+
+  video {
+    @apply w-full md:h-[80%] h-1/2 absolute bottom-0 left-0 md:object-contain object-bottom object-cover;
+  }
+
+  #title {
+    @apply md:text-6xl text-3xl text-yellow-200;
+  }
+}
