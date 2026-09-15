@@ -10,6 +10,7 @@ const App = () => {
     <main className=''>
       <Navbar />
       <Hero />
+      
     </main>
   )
 }

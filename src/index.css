@@ -87,13 +87,13 @@ body {
     p {
       @apply font-HeptaSlab -mb-2 text-sm   md:text-xl;
     }
-    button{
-      @apply bg-black text-white font-semibold px-4 py-2 rounded-full
+    button {
+      @apply bg-black text-white font-semibold px-4 py-2 rounded-full;
     }
   }
 
   #hero {
-    @apply z-10 relative min-h-dvh w-full border border-transparent ;
+    @apply z-10 relative min-h-dvh w-full border border-transparent;
 
     h1 {
       @apply text-8xl font-lexend leading-none;
@@ -103,7 +103,11 @@ body {
     }
 
     .content {
-      @apply  md:mb-16 md:mt-0 mt-40 gap-10 items-center;
+      @apply md:mb-16 md:mt-0 mt-40 gap-10 items-center;
+    }
+
+    button {
+      @apply border-black rounded-xl px-3 py-2 font-lexend mx-4 my-6 hover:scale-105 transition-transform duration-300;
     }
   }
 
@@ -114,4 +118,5 @@ body {
   #title {
     @apply md:text-6xl text-3xl text-yellow-200;
   }
+  
 }

@@ -1,6 +1,4 @@
-import { useMediaQuery } from "react-responsive";
 import { navLinks } from "../constants/index.js";
-import { useState } from "react";
 import { useGSAP } from "@gsap/react";
 import { gsap } from "gsap";
 import img from "../assets/icons/arrow-up-right-square-svgrepo-com.svg";
@@ -14,19 +12,19 @@ const Navbar: React.FC = () => {
       scrollTrigger: {
         trigger: "nav",
         start: "bottom top",
+        scrub:1
       },
     });
 
-    navTween.fromTo(
-      "nav",
-      { backgroundColor: "transparent" },
-      {
-        backgroundColor: "#000050",
-        backdropFilter: "blur(10px)",
-        duration: 1,
-        ease: "power1.inOut",
-      },
-    );
+     navTween.fromTo('nav' , 
+            {backgroundColor : 'transparent' }, 
+            {
+            backgroundColor: '#00000050',
+            backdropFilter:'blur(10px)',
+            duration:1,
+            ease:'Power1.easeInOut'
+            
+        });
 
     // gsap.from('nav' ,{opacity:0 , duration:1 , xPercent:100 , ease:"power1.inOut"})
   }, []);
